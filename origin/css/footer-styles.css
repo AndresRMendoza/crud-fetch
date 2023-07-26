@@ -1,0 +1,18 @@
+/* ---------------------------------------- Footer styles ---------------------------------------- */
+.footer {
+
+    width: 100%;
+    background-color: var(--dark-color);
+
+}
+
+.footer-container {
+    padding: 2.5rem;
+}
+
+.footer-container__p {
+    color: var(--light-color);
+    font-family: "Poppins", "Tahoma";
+    text-align: center;
+}
+

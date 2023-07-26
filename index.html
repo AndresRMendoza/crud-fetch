@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Meta tags -->
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <meta name="autor" content="Andrés Mendoza">
+        <meta name="copyright" content="created by Andrés Mendoza">
+        <meta name="description" content="CRUD realizado con el método global Fetch y las cuatro peticiones HTTPS">
+        <meta name="keywords" content="Andrés Mendoza, Andrés, Mendoza, andres mendoza, andres, mendoza, andresmendoza">
+        <meta name="theme-color" content="#111">
+        <!-- Meta tags open graph -->
+        <meta property="og:title" content="Anza registro">
+        <meta property="og:description" content="CRUD realizado con el método global Fetch y las cuatro peticiones HTTPS">
+        <meta property="og:img" content="https://andresmedoza.net/...">
+        <meta property="og:url" content="https://andresmendoza.net/">
+        <meta property="og:type" content="website">
+        <!-- Link tags -->
+        <link rel='stylesheet' type='text/css' href='origin/css/normalize.css'>
+        <link rel="stylesheet" type="text/css" href="origin/css/header-styles.css">
+        <link rel="stylesheet" type="text/css" href="origin/css/body-styles.css">
+        <link rel="stylesheet" type="text/css" href="origin/css/footer-styles.css">
+        <link rel="canonical" href="https://andresmendoza.net/">
+        <link rel="icon" href="origin/multimedia/img/favicon.png">
+        <link rel="apple-touch-icon" href="origin/multimedia/img/favicon.png">
+        <script defer src='origin/js/index.js' type="module"></script>
+        <title>Anza registro</title>
+    </head>
+    <body>
+        <noscript><h2>Es necesario que tengas habilitado JS en tu navegador para acceder a esta página.</h2></noscript>
+        <div class="container">
+            <header class="header">
+                <div class="header-container">
+                    <p class="header-container__p"><span class="header-container__span" href="index.html">Anza</span>  bufete jurídico.</p>
+                    <button class="header-container__btn">
+                        <img class="header-container__img" title="darkmode" alt="darkmode">
+                    </button>
+                </div>
+            </header>     
+            <main class="main">
+                <div class="main-container">
+                    <div class="register">
+                        <div class="register-container">
+                            <h1 class="register-container__h1">Registro de abogados.</h1>
+                            <form class="register-container__form" autocomplete="off">
+                                <input class="register-container__input" type="text" name="nombre" placeholder="Ingrese su nombre" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" title="Solo puede ingresar letras" required>
+                                <input class="register-container__input" type="text" name="apellidoP" placeholder="Ingrese su apellido paterno" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" title="Solo puede ingresar letras" required>
+                                <input class="register-container__input" type="text" name="apellidoM" placeholder="Ingrese su apellido materno" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" title="Solo puede ingresar letras" required>
+                                <select class="register-container__select" name="puesto" required>
+                                    <option class="register-container__option" value="">Seleccione su campo.</option>
+                                    <option class="register-container__option" value="Notario público">Notario público.</option>
+                                    <option class="register-container__option" value="Abogado corporativo">Abogado corporativo.</option>
+                                    <option class="register-container__option" value="Asesor jurídico">Asesor jurídico.</option>
+                                    <option class="register-container__option" value="Litigante">Litigante.</option>
+                                </select>
+                                <input class="register-container__submit" type="submit" value="Enviar">
+                            </form>
+                        </div>
+                    </div>
+                    <hr class="main-container__hr">
+                    <div class="lawyers">
+                        <div class="lawyers-container">
+                            <table class="lawyers-container__table">
+                                <caption class="lawyers-container__caption">Abogados.</caption>
+                                <thead class="lawyers-container__thead">
+                                    <tr class="lawyers-container__tr">
+                                        <th class="lawyers-container__th">Identificador</th>
+                                        <th class="lawyers-container__th">Nombre</th>
+                                        <th class="lawyers-container__th">Apellido paterno</th>
+                                        <th class="lawyers-container__th">Apellido materno</th>
+                                        <th class="lawyers-container__th">Puesto</th>
+                                        <th class="lawyers-container__th"></th>
+                                    </tr>
+                                </thead>
+                                <tbody class="lawyers-container__tbody">
+                                </tbody>
+                                <tfoot class="lawyers-container__tfoot">
+                                    <tr class="lawyers-container__tr">
+                                        <th class="lawyers-container__th" colspan="6">Hecho con Fetch.</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="modal">
+                        <div class="modal-container">
+                            <h2 class="modal-container__h2">Modificar registro.</h2>
+                            <form class="modal-container__form" autocomplete="off">
+                                <input class="modal-container__input" type="text" name="nombre" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" title="Solo puedes ingresar letras" placeholder="Ingrese su nombre" required>
+                                <input class="modal-container__input" type="text" name="apellidoP" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" title="Solo puedes ingresar letras" placeholder="Ingrese su apellido paterno" required>
+                                <input class="modal-container__input" type="text" name="apellidoM" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" title="Solo puedes ingresar letras" placeholder="Ingrese su apellido materno" required>
+                                <select class="modal-container__select" name="puesto" required>
+                                    <option class="modal-container__option" value="">Seleccione su campo</option>
+                                    <option class="modal-container__option" value="Notario público">Notario público</option>
+                                    <option class="modal-container__option" value="Abogado corporativo">Abogado corporativo</option>
+                                    <option class="modal-container__option" value="Asesor jurídico">Asesor jurídico</option>
+                                    <option class="modal-container__option" value="Litigante">Litigante</option>
+                                </select>
+                                <input class="modal-container__submit" name="submit" type="submit" value="Modificar">
+                                <input class="modal-container__btn" name="cancelar" type="button" value="Cancelar">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="footer">
+                <div class="footer-container">
+                    <p class="footer-container__p">Created by Andrés Mendoza.</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

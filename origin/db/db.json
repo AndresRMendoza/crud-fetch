@@ -1,0 +1,25 @@
+{
+  "abogados": [
+    {
+      "id": 1,
+      "nombre": "Andrés",
+      "apellido_paterno": "Ramírez",
+      "apellido_materno": "Mendoza",
+      "puesto": "Litigante"
+    },
+    {
+      "id": 2,
+      "nombre": "Francisco",
+      "apellido_paterno": "Ledezma",
+      "apellido_materno": "Sanchez",
+      "puesto": "Asesor jurídico"
+    },
+    {
+      "id": 3,
+      "nombre": "Luis",
+      "apellido_paterno": "Gonzales",
+      "apellido_materno": "Pascu",
+      "puesto": "Notario público"
+    }
+  ]
+}
